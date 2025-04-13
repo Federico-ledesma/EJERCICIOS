@@ -50,3 +50,44 @@ body{
     list-style: none;;
 }
 
+/*!------------------------  */
+/** Conversor de temperatura */
+
+.tituloConversor{
+    margin-top: 50px;
+}
+
+.contendorprimero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+
+.inputCelsius, .inputFahrenheit{
+    text-align: center;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.labelC{
+    margin-right: 34px;
+}
+
+.flecha1{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.flecha2{
+    margin-left: 10px;
+    cursor: pointer;
+}

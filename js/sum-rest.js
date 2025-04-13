@@ -44,3 +44,26 @@ subir.addEventListener('click', (e) => {
 })
 
 //!---------------------------------------------------------
+
+//* Conversor de temperaturas
+
+//* 1c = 33.8 F
+
+const celsius = document.getElementById('celsiusInput')
+const fahrenheit = document.getElementById('fahrenheitInput')
+
+const flecha1 = document.getElementById('flecha1')
+
+
+flecha1.addEventListener('click', (e) => {
+    
+    const celsiusNum = parseInt(celsius.value)
+    resultadoF = (celsiusNum * 9/5) + 32
+    
+    fahrenheit.placeholder = resultadoF
+
+    if (celsius === NaN) {
+        fahrenheit.placeholder = ''
+    }
+
+})
