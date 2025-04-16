@@ -10,15 +10,24 @@ contador = 0
 botonSumar.addEventListener('click', function(){
     let resultado = contador+=1
     parrafo.innerText = resultado
-    parrafo.style.backgroundColor = "#0f0"
-    parrafo.style.color = "#000"
+    
+    if (parrafo.innerText > 0){
+        parrafo.style.backgroundColor = "#0f0"
+        parrafo.style.color = "#000"
+    }
+    
+    
 })
 
 botonRestar.addEventListener('click', function(){
     let resultado = contador-=1
     parrafo.innerText = resultado
-    parrafo.style.backgroundColor = "#f00"
-    parrafo.style.color = "#fff"
+
+    if(parrafo.innerText < 0){
+        parrafo.style.backgroundColor = "#f00"
+        parrafo.style.color = "#fff"
+    }
+
 })
 
 
@@ -60,10 +69,34 @@ flecha1.addEventListener('click', (e) => {
     const celsiusNum = parseInt(celsius.value)
     resultadoF = (celsiusNum * 9/5) + 32
     
+
     fahrenheit.placeholder = resultadoF
 
     if (celsius === NaN) {
         fahrenheit.placeholder = ''
     }
 
+})
+
+//!-----------------------------------------------------
+//* To do list
+
+const inputTodo = document.getElementById('inputtodo')
+const botonAgregar = document.getElementById('agregar')
+const ulContenedor = document.getElementById('container-tareas')
+
+
+botonAgregar.addEventListener('click', function agregar(){
+    
+    /* Creo un elemento li de lista */
+    const lista = document.createElement('li')
+    /* obtengo el valor del input */
+    const texto = inputTodo.value
+
+    /* en el elemento li ingreso el texto del input */
+    lista.textContent = texto
+    
+    /* agrego el li con el texto ya listo en el ul */
+    ulContenedor.appendChild(lista)
+    
 })
