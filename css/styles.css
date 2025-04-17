@@ -110,3 +110,14 @@ body{
     margin-top: 20px;
 }
 
+.listaTexto{
+    font-size: 20px;
+    list-style: none;
+}
+
+/*!---------------------------------------------------------  */
+/** Cambiar color de fondo  */
+
+#inputCambiar{
+    margin-top: 100px;
+}

@@ -86,8 +86,8 @@ const botonAgregar = document.getElementById('agregar')
 const ulContenedor = document.getElementById('container-tareas')
 
 
-botonAgregar.addEventListener('click', function agregar(){
-    
+
+botonAgregar.addEventListener('click', function agregarTarea(){
     /* Creo un elemento li de lista */
     const lista = document.createElement('li')
     /* obtengo el valor del input */
@@ -96,7 +96,24 @@ botonAgregar.addEventListener('click', function agregar(){
     /* en el elemento li ingreso el texto del input */
     lista.textContent = texto
     
+    lista.classList.add('listaTexto')
+
     /* agrego el li con el texto ya listo en el ul */
     ulContenedor.appendChild(lista)
-    
+})
+
+
+//!--------------------------------------------------------------
+
+//* Cambiar color de fondo
+
+
+const inputCambiar = document.getElementById('inputCambiar')
+const botonCambiar = document.getElementById('botonCambiar')
+
+const body = document.body
+
+botonCambiar.addEventListener('click', function cambiarColor(){
+    const color = inputCambiar.value
+    body.style.backgroundColor = color
 })
